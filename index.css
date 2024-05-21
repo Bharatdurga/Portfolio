@@ -446,3 +446,64 @@ li a:hover {
        padding-left: 1rem;
 
     }
+    
+    /* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .project {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Flexbox for projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project {
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
