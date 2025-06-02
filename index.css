@@ -527,3 +527,26 @@ li a:hover {
         margin: 0 auto;
     }
 }
+.certificate-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.certificate {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .certificate-slider {
+    max-width: 95%;
+  }
+}
