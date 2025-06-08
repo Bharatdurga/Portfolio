@@ -31,6 +31,7 @@
                     <li><a href="#About" style="--navAni:2">About</a></li>
                     <li><a href="#MyTechStack" style="--navAni:3">MyTechStack</a></li>
                     <li><a href="#Certificates" style="--navAni:4">Certificates</a></li>
+                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#Contact" style="--navAni:5">Contact</a></li>
                 </ul>
                 <label class="mode">
@@ -102,14 +103,74 @@
       <a href="https://www.google.com/search?q=Spring Boot" target="_blank">
         <img class="logo-img" src="./Tech Logos/download.png" alt="Spring Boot Logo" />
       </a>
-      <a href="https://www.google.com/search?q=Spring Boot" target="_blank">
+      <a href="https://aws.amazon.com/free/?trk=14a4002d-4936-4343-8211-b5a150ca592b&sc_channel=ps&ef_id=CjwKCAjw6ZTCBhBOEiwAqfwJd3-KRi0E7yOtrtn7kDZ-1KmM-8Wrsl9tPcLteQZxtk1bV2cD2YxuXBoC_WMQAvD_BwE:G:s&s_kwcid=AL!4422!3!453325184782!e!!g!!aws!10712784856!111477279771&gad_campaignid=10712784856&gbraid=0AAAAADjHtp8l0I8KFGVm3m0T8rPG9RL23&gclid=CjwKCAjw6ZTCBhBOEiwAqfwJd3-KRi0E7yOtrtn7kDZ-1KmM-8Wrsl9tPcLteQZxtk1bV2cD2YxuXBoC_WMQAvD_BwE&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all" target="_blank">
         <img class="logo-img" src="./Tech Logos/aws.png" alt="AWS Logo" />
       </a>
     </div>
   </div>
 </div>
-        
-        
+<br>
+<div class="container">
+  <div id="projects">
+  <section id="projects">
+    <h1>Projects</h1>
+
+    <div id="PaypalProject">
+      <h2>PayPal Payment Integration Project</h2>
+      <p>
+        Designed and implemented a secure, scalable payment processing system by integrating PayPal's REST APIs into a Spring Boot microservices architecture deployed on AWS. Led the end-to-end implementation of PayPal Standard Checkout, developing core functionalities including order management, real-time payment status tracking, and automated reconciliation processes.
+      </p>
+      <p>
+        Established OAuth 2.0 security protocols and comprehensive exception handling to ensure transaction reliability. Enhanced system performance through Redis caching and Spring Scheduler for token management. Followed RESTful principles and used design patterns for a modular, maintainable codebase.
+      </p>
+    <h3 style="text-align:center; margin-top: 60px;">🧰 <strong>Responsibilities</strong></h3>
+
+<div class="responsibilities-section">
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="Integration approach based on PayPal Standard Checkout documentation.">✅ Finalized</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="PayPal-provider-service using PayPal REST APIs (📄 Create, ✅ Capture, 🔍 Show Order).">🔧 Developed</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="Factory and Builder design patterns for a scalable architecture.">🧱 Applied</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="Payment reconciliation logic ensuring full transaction lifecycle completion.">🔁 Created</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="Real-time payment status tracking and lifecycle transitions.">📊 Managed</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="For fast and secure access token management.">⚡ Used Redis</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="Using OAuth 2.0 (Client Credentials flow).">🔐 Secured APIs</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="Circuit breaker for fault tolerance using Resilience4j.">🔄 Implemented</h4>
+  </div>
+  <div class="responsibility-card">
+    <h4 class="clickable" data-msg="With custom codes and Spring Boot exception handling.">🧩 Handled Errors</h4>
+  </div>
+</div>
+
+<!-- Modal structure -->
+<div id="popup-modal" class="modal">
+  <div class="modal-content">
+    <span id="modal-close" class="close">&times;</span>
+    <p id="modal-message"></p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</div>
+<br>
+
+<br>
+    
           
         <br>
 
@@ -171,6 +232,34 @@
                 localStorage.setItem('darkMode', 'disabled');
             }
         });
+
+
+        // Get modal elements
+const modal = document.getElementById('popup-modal');
+const modalMessage = document.getElementById('modal-message');
+const modalClose = document.getElementById('modal-close');
+
+// Attach click event on all clickable headers
+document.querySelectorAll('.clickable').forEach(header => {
+  header.addEventListener('click', () => {
+    const msg = header.getAttribute('data-msg');
+    modalMessage.textContent = msg;
+    modal.style.display = 'block';
+  });
+});
+
+// Close modal on clicking the close button
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Also close modal if user clicks outside modal content
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
 
 </script>
 <script>
