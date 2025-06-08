@@ -686,4 +686,114 @@ li a:hover {
   filter: brightness(0.95); /* Optional: slightly reduce brightness in dark mode */
 }
 
+/* Make typography scale well across devices */
+body {
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.6;
+}
+
+.main h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+.main h3, .main p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Responsive flex for social icons */
+.social {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Ensure grid layout adapts fluidly */
+.main {
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  padding: 4rem 1rem;
+  gap: 2rem;
+}
+
+/* Adjust project box layout dynamically */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.project {
+  flex: 1 1 100%;
+}
+
+/* Adjust certificates */
+.certificate img {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+
+/* Image container adjustments */
+.images {
+  width: min(80vw, 350px);
+  height: min(80vw, 350px);
+  margin: auto;
+}
+
+/* Navigation menu spacing for small devices */
+@media screen and (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mode {
+    position: static;
+    margin-top: 0.5rem;
+  }
+
+  .tech img, .logo-img {
+    width: 60px;
+  }
+
+  .main {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .certificate-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Extra mobile refinements */
+@media screen and (max-width: 480px) {
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .main h3 {
+    font-size: 1.2rem;
+  }
+
+  .tech img {
+    width: 50px;
+  }
+
+  .images {
+    width: 150px;
+    height: 150px;
+  }
+
+  .popup {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    width: 95%;
+  }
+}
+
 
